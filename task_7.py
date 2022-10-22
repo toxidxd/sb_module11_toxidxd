@@ -16,3 +16,39 @@ print('Задача 7. Ход конём')
 # 0.068
 # Конь в клетке (0, 1). Точка в клетке (2, 0).
 # Да, конь может ходить в эту точку.
+
+print("Введите местоположение коня")
+while True:
+    x = float(input("По горизонтали: "))
+    y = float(input("По вертикали: "))
+
+    if x < 0 or x > 0.8 or y < 0 or y > 0.8:
+        print("Wrong input!")
+    else:
+        break
+
+xSq = int(x * 10)
+ySq = int(y * 10)
+
+print("Введите местоположение точки на доске")
+while True:
+    go_x = float(input("По горизонтали: "))
+    go_y = float(input("По вертикали: "))
+
+    if go_x < 0 or go_x > 0.8 or go_y < 0 or go_y > 0.8:
+        print("Wrong input!")
+    else:
+        break
+
+go_xSq = int(go_x * 10)
+go_ySq = int(go_y * 10)
+
+print(f"Конь в клетке ({xSq}, {ySq}). Точка в клетке ({go_xSq}, {go_ySq}).")
+
+if xSq + 2 == go_xSq or xSq - 2 == go_xSq:
+    if ySq + 1 == go_ySq or ySq - 1 == go_ySq:
+        print("Да, конь может ходить в эту точку")
+
+elif ySq + 2 == go_ySq or ySq - 2 == go_ySq:
+    if xSq + 1 == go_xSq or xSq - 1 == go_xSq:
+        print("Да, конь может ходить в эту точку")
