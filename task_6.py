@@ -37,8 +37,6 @@ low_limit = int(input("Нижняя граница: "))
 top_limit = int(input("Верхняя граница: "))
 step = int(input("Шаг: "))
 
-# f_temp = int(9 / 5 * low_limit + 32)
-
 print("Вывод:")
 print("C", end="\t")
 print("F")
