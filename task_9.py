@@ -15,6 +15,7 @@ while True:
     a = float(input("a = "))
     if a != 0:
         break
+    print("Не верный ввод: a != 0")
 
 b = float(input("b = "))
 c = float(input("c = "))
