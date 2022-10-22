@@ -49,7 +49,7 @@ for c_temp in range(low_limit, top_limit, step):
     print(round(f_temp, 1))
     c_temp += step
 
-    if c_temp > top_limit:
+    if c_temp >= top_limit:
         f_temp = 9 / 5 * top_limit + 32  # += top_limit * 1.8
         print(top_limit, end="\t")
         print(round(f_temp, 1))
