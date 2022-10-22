@@ -1,3 +1,5 @@
+import math
+
 print('Задача 9. Уравнение')
 
 # Даны действительные коэффициенты a, b, c,
@@ -8,3 +10,24 @@ print('Задача 9. Уравнение')
 # выведите два корня в порядке возрастания,
 # если один корень — выведите одно число, 
 # если нет корней — не выводите ничего
+
+while True:
+    a = float(input("a = "))
+    if a != 0:
+        break
+
+b = float(input("b = "))
+c = float(input("c = "))
+
+d = b ** 2 - 4 * a * c  # дискриминант
+
+if d > 0:  # два корня
+    root1 = (-b + math.sqrt(d)) / 2 * a
+    root2 = (-b - math.sqrt(d)) / 2 * a
+    if root1 > root2:
+        root1, root2 = root2, root1
+    print(f"Корни уравнения равны {root1} и {root2}")
+
+elif d == 0:  # один корень
+    root = (-b + math.sqrt(d)) / 2 * a
+    print(f"Корень уравнения равен {root}")
