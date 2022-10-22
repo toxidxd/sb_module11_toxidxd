@@ -28,3 +28,18 @@ print('Задача 3. Убийца Steam')
 # Прошло 3 сек. Скачано 81 из 123 Мб (66%)
 # Прошло 4 сек. Скачано 108 из 123 Мб (88%)
 # Прошло 5 сек. Скачано 123 из 123 Мб (100%)
+
+file_size = float(input("Укажите размер файла для скачивания (Мб): "))
+connection_speed = int(input("Укажите скорость вашего соединения (Мб/с): "))
+
+progress = 0
+pass_time = 0
+
+while progress < file_size:
+    progress += connection_speed
+    pass_time += 1
+    if progress > file_size:
+        # progress = progress - (progress - file_size)
+        progress = file_size
+
+    print(f"Прошло {pass_time} сек. Скачано {progress} из {file_size} Мб ({int(progress / file_size * 100)}%)")
