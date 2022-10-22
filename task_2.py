@@ -26,3 +26,17 @@ print('Задача 2. Грубая математика')
 # 
 # Введите число: -5.9
 # x = -6   exp(x) = 0.0024787521766663585
+
+import math
+
+
+num_count = int(input("Введите кол-во чисел: "))
+
+for _ in range(num_count):
+    x = float(input("Введите число: "))
+    if x == 0:
+        print("Введите число отличное от 0")
+    elif x > 0:
+        print(f"x = {math.ceil(x)}, log(x) =  {math.log(math.ceil(x))}")
+    elif x < 0:
+        print(f"x = {math.floor(x)}, exp(x) = {math.exp(math.floor(x))}")
